@@ -1,0 +1,6 @@
+streamlit>=1.30.0
+streamlit-authenticator==0.3.3
+pandas
+plotly
+pyyaml
+bcrypt

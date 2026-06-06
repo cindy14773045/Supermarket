@@ -1,0 +1,14 @@
+credentials:
+  usernames:
+    admin:
+      name: 管理員
+      password: ""   # 用 bcrypt 雜湊後的密碼，不要填明文
+    user1:
+      name: 業務一
+      password: ""
+cookie:
+  expiry_days: 1
+  key: 請換成你自己的隨機字串至少32個字元
+  name: supermarket_auth
+preauthorized:
+  emails: []
