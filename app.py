@@ -12,9 +12,13 @@ st.set_page_config(
     layout="wide",
 )
 
-# 載入帳號設定
-with open("config.yaml") as f:
-    config = yaml.load(f, Loader=SafeLoader)
+# 載入帳號設定：本機用 config.yaml，雲端用 Streamlit Secrets
+import os
+if os.path.exists("config.yaml"):
+    with open("config.yaml") as f:
+        config = yaml.load(f, Loader=SafeLoader)
+else:
+    config = yaml.safe_load(st.secrets["config_yaml"])
 
 authenticator = stauth.Authenticate(
     config["credentials"],
