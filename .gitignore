@@ -1,5 +1,4 @@
 config.yaml
-supermarket_sales.csv
 __pycache__/
 *.pyc
 .streamlit/secrets.toml
